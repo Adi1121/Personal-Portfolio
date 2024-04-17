@@ -139,3 +139,14 @@ const headerLogoConatiner = document.querySelector('.main-header__logo-container
 headerLogoConatiner.addEventListener('click', () => {
   location.href = 'index.html'
 })
+
+const cards = document.querySelectorAll('.education__card');
+
+cards.forEach(card => {
+  const flipButton = card.querySelector('.btn-flip');
+  const flipContainer = card.querySelector('.education__flip-container');
+
+  flipButton.addEventListener('click', () => {
+    flipContainer.classList.toggle('flipped');
+  });
+});
